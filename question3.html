@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <script src="validate.js"></script>
+    <style>
+        @keyframes change {
+            0% {background-color: darkorange;}          
+             20% {background-color: lightgoldenrodyellow;}
+             50% {background-color: darkorange;}
+             70% {background-color: lightgoldenrodyellow;}
+             100% {background-color: darkorange;}
+        }
+
+    
+
+        body {
+            animation-name: change;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            font-family: Trebuchet MS;
+            color: white;
+        }
+
+        button {
+            width: 50%;
+            font-family: Trebuchet MS;
+            color: white;
+            font-size: 20px;
+            padding: 75px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.25s;
+        }
+
+    
+
+        #green {
+            background-color: green;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+
+        button:hover {
+            opacity: 0.75;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            color: black;
+            font-size: 45px;
+        }
+
+        #demo {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        #score {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>What's it called to have a fear of being happy?</h1>
+<p id="demo"></p>
+<p id="score"></p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<button id="red" onclick="gog()">Cynophobia</button><button id="blue" onclick="gog()">Tryphanophobia</button>
+<br>
+<button id="orange" onclick="gogg()">Cherophobia</button><button id="green" onclick="gog()">Algophobia</button>
+
+
+</body>
+
+
+</html>

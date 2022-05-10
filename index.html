@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body {
+            animation-name: change;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            font-family: Trebuchet MS;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            font-size: 35px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        button {
+            margin-top: 100px;
+            
+        }
+
+        #left {
+            padding: 50px;
+            font-size: 20px;
+            width: 40%;
+            background-color: red;
+            border: none;
+            transition: 0.2s;
+            font-family: Trebuchet MS;
+            color: white;
+        }
+
+        #left:hover {
+            opacity: 0.75;
+        }
+
+        #right:hover {
+            opacity: 0.75;
+        }
+
+        #right {
+            padding: 50px;
+            font-size: 20px;
+            width: 40%;
+            background-color: blue;
+            border: none;
+            transition: 0.2s;
+            font-family: Trebuchet MS;
+            color: white;
+        }
+
+        #left:hover {
+            opacity: 0.75;
+            background-color: red;
+        }
+
+        #must {
+            text-align: center;
+            font-size: 40px;
+        }
+
+
+
+        @keyframes change {
+            0% {background-color: green;}
+            20% {background-color: blue;}           
+             40% {background-color: red;}
+             60% {background-color: brown;}
+             80% {background-color: darkorange;}
+             100% {background-color: green;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Ready to start the quiz?</h1>
+    <p>Quiz on Random Stuff</p>
+    <p id="must"></p>
+    <div style="margin-left: 320px;">
+    <a href="questions.html"><button id="left">Yes, I'm ready</button></a><a><button id="right" onclick="document.getElementById('must').innerHTML = 'You must take the quiz.'">No, go back</button></a>
+    </div>
+</body>
+
+</html>

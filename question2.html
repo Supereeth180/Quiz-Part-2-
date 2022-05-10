@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        @keyframes change {
+            0% {background-color: darkorange;}          
+             20% {background-color: lightgoldenrodyellow;}
+             50% {background-color: darkorange;}
+             70% {background-color: lightgoldenrodyellow;}
+             100% {background-color: darkorange;}
+        }
+
+    
+
+        body {
+            animation-name: change;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            font-family: Trebuchet MS;
+            color: white;
+        }
+
+        button {
+            width: 50%;
+            font-family: Trebuchet MS;
+            color: white;
+            font-size: 20px;
+            padding: 75px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.25s;
+        }
+
+    
+
+        #green {
+            background-color: green;
+        }
+
+        #blue {
+            background-color: blue;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #orange {
+            background-color: orange;
+        }
+
+
+        button:hover {
+            opacity: 0.75;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+            color: black;
+            font-size: 45px;
+        }
+
+        #demo {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        #score {
+            text-align: center;
+            font-size: 35px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<h1>What is the most popular sport in the world?</h1>
+<p id="demo"></p>
+<p id="score"></p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<button id="red" onclick="gog()">Tennis</button><button id="blue" onclick="gog()">Cricket</button>
+<br>
+<button id="orange" onclick="gog()">Hockey</button><button id="green" onclick="gogg()">Soccer(Football)</button>
+
+<script>
+
+const myInterval = setInterval(myTimer, 1000);
+const out = setTimeout(outt, 29000);
+function outt(){
+    document.getElementById("demo").innerHTML = "Time's up!";
+        setTimeout(move, 5000);
+    myStopFunction();
+}
+
+function myTimer() {
+  const date = new Date();
+  document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+
+function myStopFunction() {
+  clearInterval(myInterval);
+  clearTimeout(outt);
+}
+
+function gog(){
+    document.getElementById("demo").innerHTML = "Incorrect";
+    document.getElementById("red").setAttribute("disabled", "");
+    document.getElementById("orange").setAttribute("disabled", "");
+    document.getElementById("blue").setAttribute("disabled", "");
+    document.getElementById("green").setAttribute("disabled", "");
+    document.getElementById("score").innerHTML = "-100";
+    document.getElementById("score").style.color = "red";
+    setTimeout(move, 5000);
+    myStopFunction();
+}
+ 
+
+function gogg(){
+    document.getElementById("demo").innerHTML = "Correct";
+    document.getElementById("red").setAttribute("disabled", "");
+    document.getElementById("orange").setAttribute("disabled", "");
+    document.getElementById("blue").setAttribute("disabled", "");
+    document.getElementById("green").setAttribute("disabled", "");
+    document.getElementById("score").innerHTML = "+100";
+    document.getElementById("score").style.color = "green";
+    setTimeout(move, 5000);
+    myStopFunction();
+}
+
+
+function move(){
+    document.location = "question3.html";
+}
+
+
+    
+</script>
+</body>
+
+
+</html>
